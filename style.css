@@ -1,235 +1,304 @@
-@font-face {
-    font-family: myFont;
-    src:url(D:\PracticeCode\Calcu\popup\corleone)
-}
-body {
-    font-family: myFont;
-    background-color: #40813f;
-    letter-spacing: 3px;
-    color: white;
-    
-}
 
-.container {
-        font-family: "Corleone", sans-serif;
-        width: 300px; 
-        height: 400px;
-        background-color: #f0f0f0; 
-        border: 2px solid #ccc; 
-        border-radius: 8px;
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        align-items: center; 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 6px solid #5a3d1b;
-        background-image: url('https://static.wixstatic.com/media/6956ac_2d64f03a4a0d4fe4b467f2d3290042a8.jpg/v1/fill/w_552,h_372,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/6956ac_2d64f03a4a0d4fe4b467f2d3290042a8.jpg');
-    }
-
-    .container > * {
-        margin: 5px; /* Adjust the margin value to create the desired spacing */
-    }
-
-
-
-.btn {
-    padding: 10px 20px;
-    background-color: #cacaca;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-right: 10px;
-    
-}
-
-.btnC {
-    padding: 10px 20px;
-    background-color: #5a3d1b;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-right: 10px;
-}
-
-.btnC:hover {
-    background-color: #7f5e35;
-}
-
-.btnC2 {
-    padding: 10px 20px;
-    background-color: #5a3d1b;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-right: 10px;
-}
-
-.btnC2:hover {
-    background-color: #7f5e35;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #bb926b;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;  
-    border: 3px solid #5a3d1b; 
-}
-
-.popup h4,
-.popup h5,
-.popup h6,
-.popup input,
-.popup button {
-    margin: 5px 0;
-}
-
-.popup.show {
-    display: block;
-}
-
-.shells-popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #bb926b;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    border: 3px solid #5a3d1b;
-}
-
-.shells-popup h4,
-.shells-popup h5,
-.shells-popup h6,
-.shells-popup input,
-.shells-popup button {
-    margin: 5px 0;
-}
-.shells-popup.show {
-    display: block;
-}
-
-#shells-image {
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 100%; /* Ensure the image doesn't exceed the width of the popup */
-    height: auto; /* Maintain the aspect ratio of the image */
-}
-#Watermark {
-    color: rgb(255, 255, 255); /* Change the color to your desired value, e.g., red, #FF0000, etc. */
-  }
-
-#mushroom-image {
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 100%; /* Ensure the image doesn't exceed the width of the popup */
-    height: auto; /* Maintain the aspect ratio of the image */
-}
-
-  .mush-button {
-    display: inline-block;
-    background-color: #bb926b;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    border: 3px solid #5a3d1b;
-      
-}
-
-.mush-button:hover {
-    background-color: #a37c4f;
-}
-
-.shells-button {
-    display: inline-block;
-    background-color: #bb926b;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    border: 3px solid #5a3d1b;
-    
-}
-
-.shells-button:hover {
-    background-color: #a37c4f;
-}
-
-.trash-button {
-    display: inline-block;
-    background-color: #bb926b;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    border: 3px solid #5a3d1b;
-   
-}
-
-.trash-button:hover {
-    background-color: #a37c4f;
-}
-
-.trash-popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #bb926b;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    border: 3px solid #5a3d1b;
-}
-
-.trash-popup.show {
-    display: block;
-}
-
-#trash-image {
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 100%; /* Ensure the image doesn't exceed the width of the popup */
-    height: auto; /* Maintain the aspect ratio of the image */
-}
-
-.trash-popup h4,
-.trash-popup h5,
-.trash-popup h6,
-.trash-popup input,
-.trash -popup button {
-    margin: 5px 0;
-}
-
-.shells-button img,
-.trash-button img,
-.mush-button img {
-  width: 30px; /* Adjust the width to your desired size */
-  height: 30px; /* Automatically adjust the height to maintain the aspect ratio */
-}
-
+        @font-face {
+            font-family: myFont;
+            src: url(D:\PracticeCode\Calcu\popup\corleone);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: myFont;
+            background-color: #40813f;
+            letter-spacing: 3px;
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            font-family: "Corleone", sans-serif;
+            width: 90%;
+            max-width: 300px;
+            height: auto;
+            min-height: 400px;
+            background-color: #f0f0f0;
+            border: 6px solid #5a3d1b;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 15px;
+            background-image: url('https://static.wixstatic.com/media/6956ac_2d64f03a4a0d4fe4b467f2d3290042a8.jpg/v1/fill/w_552,h_372,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/6956ac_2d64f03a4a0d4fe4b467f2d3290042a8.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 20px auto;
+        }
+        
+        .container > * {
+            margin: 5px;
+        }
+        
+        .container > img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            background-color: #cacaca;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        
+        .btnC {
+            padding: 10px 20px;
+            background-color: #5a3d1b;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        
+        .btnC:hover {
+            background-color: #7f5e35;
+        }
+        
+        .btnC2 {
+            padding: 10px 20px;
+            background-color: #5a3d1b;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        
+        .btnC2:hover {
+            background-color: #7f5e35;
+        }
+        
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #bb926b;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            border: 3px solid #5a3d1b;
+            width: 90%;
+            max-width: 350px;
+            z-index: 1000;
+        }
+        
+        .popup h4,
+        .popup h5,
+        .popup h6,
+        .popup input,
+        .popup button {
+            margin: 5px 0;
+        }
+        
+        .popup.show {
+            display: block;
+        }
+        
+        .shells-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #bb926b;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            border: 3px solid #5a3d1b;
+            width: 90%;
+            max-width: 350px;
+            z-index: 1000;
+        }
+        
+        .shells-popup h4,
+        .shells-popup h5,
+        .shells-popup h6,
+        .shells-popup input,
+        .shells-popup button {
+            margin: 5px 0;
+        }
+        
+        .shells-popup.show {
+            display: block;
+        }
+        
+        #shells-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        #Watermark {
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        #mushroom-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .mush-button {
+            display: inline-block;
+            background-color: #bb926b;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: 3px solid #5a3d1b;
+            width: 100%;
+            max-width: 150px;
+            margin: 5px 0;
+        }
+        
+        .mush-button:hover {
+            background-color: #a37c4f;
+        }
+        
+        .shells-button {
+            display: inline-block;
+            background-color: #bb926b;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: 3px solid #5a3d1b;
+            width: 100%;
+            max-width: 150px;
+            margin: 5px 0;
+        }
+        
+        .shells-button:hover {
+            background-color: #a37c4f;
+        }
+        
+        .trash-button {
+            display: inline-block;
+            background-color: #bb926b;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: 3px solid #5a3d1b;
+            width: 100%;
+            max-width: 150px;
+            margin: 5px 0;
+        }
+        
+        .trash-button:hover {
+            background-color: #a37c4f;
+        }
+        
+        .trash-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #bb926b;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            border: 3px solid #5a3d1b;
+            width: 90%;
+            max-width: 350px;
+            z-index: 1000;
+        }
+        
+        .trash-popup.show {
+            display: block;
+        }
+        
+        #trash-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .trash-popup h4,
+        .trash-popup h5,
+        .trash-popup h6,
+        .trash-popup input,
+        .trash-popup button {
+            margin: 5px 0;
+        }
+        
+        .shells-button img,
+        .trash-button img,
+        .mush-button img {
+            width: 30px;
+            height: 30px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 350px;
+            }
+            
+            .mush-button,
+            .shells-button,
+            .trash-button {
+                max-width: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .popup,
+            .shells-popup,
+            .trash-popup {
+                padding: 15px;
+            }
+            
+            h4, h5 {
+                font-size: 14px;
+            }
+            
+            .btnC, .btnC2 {
+                padding: 8px 16px;
+            }
+        }
